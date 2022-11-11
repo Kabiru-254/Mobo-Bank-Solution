@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank Balance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/css/styles.css">
+
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="top">
+        <div class="title"><h1>Request Payload</h1></div>
+    </div>
+
+
+
+    <div class="content">
+        <div class="card">
+            <h2>{{ params["narration"] }}</h2>
+            <p class="text">Transaction Ref: {{ params["transaction_reference"] }}</p>
+            <p class="text">Transaction Code: {{ params["transaction_code"] }}</p>
+            <p class="text">Amount: {{ params["amount"] }}</p>
+            <p class="text">Phone Number: {{ params["phone_number"] }}</p>
+            <br>
+            <a href="{{ url_for('invoke', transaction_details=params) }}">Check Balance</a>
+
+        </div>
+    </div>
+
+<!--    <div class="content">-->
+<!--        <div class="card">-->
+<!--            <h2>Another blog post</h2>-->
+<!--            <p class="text">Lorem ipsum dolor sit </p>-->
+<!--            <a href="#">Read</a>-->
+<!--        </div>-->
+<!--    </div>-->
+</div>
+</body>
+<footer>
+    <p>Made with ♥️ in Regen.</p>
+</footer>
+</html>
